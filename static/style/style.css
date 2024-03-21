@@ -52,6 +52,7 @@ table {
 .sidebar ul {
   display: flex;
   flex-direction: column;
+  row-gap: 20px;
   padding: 5px;
 }
 
@@ -67,6 +68,7 @@ table {
   width: 100%;
   padding: 10px;
   white-space: nowrap;
+  transition: all;
 }
 
 .sidebar ul li a.active,
@@ -74,6 +76,7 @@ table {
 
   background-color: #222222;
   border-radius: 10px;
+  transition-duration: 300ms;
 }
 
 .sidebar ul li span {
@@ -97,19 +100,20 @@ table {
 
 .bg-profile {
   display: flex;
-    justify-content: center;
-    align-items: center;
-    background: orange;
-    width: 60px;
-    height: 60px;
-    margin: 30px auto;
-    border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  background: orange;
+  width: 60px;
+  height: 60px;
+  margin: 30px auto;
+  border-radius: 100px;
 }
 
 .profile-info {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .profile-info p {
   color: #93A2B8;
   font-size: 13px;
@@ -164,7 +168,7 @@ table {
   background: transparent;
 }
 
-.cms-title h2{
+.cms-title h2 {
   font-size: 16px;
 }
 
@@ -189,8 +193,6 @@ table {
   outline: none;
 }
 
-.header-search input[type="search"]::placeholder {}
-
 .header-search .button-menu:focus {
   outline: none;
   border: none;
@@ -205,32 +207,36 @@ table {
   border-radius: 10px;
   margin-top: 2rem;
 }
+
 .detail-info {
   line-height: 1.5rem;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .detail-info span {
   color: #93A2B8;
 }
+
 .status {
-    color: #fff !important;
-    font-weight: 600;
-    padding: 0.2rem 1rem;
-    border-radius: 2px;
-    line-height: 2rem;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 0.2rem 1rem;
+  border-radius: 2px;
+  line-height: 2rem;
 }
+
 .button-back {
   display: flex;
-    justify-content: right;
+  justify-content: right;
 }
-.button-back a{
-    padding: 0.7rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-    font-weight: 600;
+
+.button-back a {
+  padding: 0.7rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 991px) {

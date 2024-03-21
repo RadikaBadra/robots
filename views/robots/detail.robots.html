@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {{ template "init" . }}
-  <title>Document</title>
+  <title>Robot Detail</title>
 </head>
+
 <body class="bg-primary text-secondary">
-  
+
   <div class="layout">
     <div class="main">
       <!--    sidebar -->
@@ -22,7 +24,7 @@
             <h1>Detail</h1>
           </div>
         </div>
-        
+
         <div class="card-detail bg-secondary">
           <div class="detail-info">
             <p>Name</p>
@@ -50,12 +52,33 @@
         <div class="button-back">
           <a href="/robots" class="text-secondary bg-black">Back</a>
         </div>
-        
+
       </div>
     </div>
   </div>
 
 
-<script src="../static/js/script.js"></script>
+  <script>
+    const status = document.querySelectorAll(".status")
+
+    status.forEach(item => {
+      switch (item.innerText) {
+        case "2":
+          item.innerText = "Fault"
+          break;
+        case "3":
+          item.innerText = "Running a job"
+          break;
+        case "4":
+          item.innerText = "E-stopped"
+          break;
+        default:
+          item.innerText = "Offline"
+          break;
+      }
+    });
+  </script>
+  <script src="../../static/js/script.js"></script>
 </body>
+
 </html>

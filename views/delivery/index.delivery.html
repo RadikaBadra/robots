@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {{ template "init" . }}
-    <title>Document</title>
-  </head>
-  <body class="bg-primary text-secondary">
-    <div class="layout">
-      <div class="main">
-        <!--    sidebar -->
-        {{ template "sidebar" . }}
 
-        <div class="page-content">
-          <!-- header -->
-          {{ template "header" . }}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{ template "init" . }}
+  <title>Delivery Task Lists</title>
+</head>
 
-          <div class="header-top border">
-            <div class="header container">
-              <h1>Delivery</h1>
-            </div>
+<body class="bg-primary text-secondary">
+  <div class="layout">
+    <div class="main">
+      <!--    sidebar -->
+      {{ template "sidebar" . }}
+
+      <div class="page-content">
+        <!-- header -->
+        {{ template "header" . }}
+
+        <div class="header-top border">
+          <div class="header container">
+            <h1>Delivery</h1>
           </div>
+        </div>
 
-          <div class="table-top">
-            <table>
-              <tr class="bg-variant tr-header">
-                <th>ID</th>
-                <th>Robot ID</th>
-                <th>Vendor ID</th>
-                <th>Task ID</th>
-                <th>Task Type</th>
-                <th>Destination Point</th>
-              </tr>
-              {{ range .data }}
-              <tr class="bg-secondary">
-                <td>
-                  <a href="deliveries/{{.Id}}" class="text-primary">{{.Id}}</a>
-                </td>
-                <td>{{.RobotId}}</td>
-                <td>{{.VendorId}}</td>
-                <td>{{.TaskId}}</td>
-                <td>{{.TaskType}}</td>
-                <td>{{.DestinationPoint}}</td>
-              </tr>
-              {{ end }}
-            </table>
-          </div>
+        <div class="table-top">
+          <table>
+            <tr class="bg-variant tr-header">
+              <th>ID</th>
+              <th>Robot ID</th>
+              <th>Vendor ID</th>
+              <th>Task ID</th>
+              <th>Task Type</th>
+              <th>Destination Point</th>
+            </tr>
+            {{ range .data }}
+            <tr class="bg-secondary">
+              <td>
+                <a href="deliveries/{{.Id}}" class="text-primary">{{.Id}}</a>
+              </td>
+              <td>{{.RobotId}}</td>
+              <td>{{.VendorId}}</td>
+              <td>{{.TaskId}}</td>
+              <td>{{.TaskType}}</td>
+              <td>{{.DestinationPoint}}</td>
+            </tr>
+            {{ end }}
+          </table>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="../static/js/script.js"></script>
-  </body>
+  <script src="../static/js/script.js"></script>
+</body>
+
 </html>
