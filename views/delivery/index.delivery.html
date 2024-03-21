@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robots List</title>
+  <link rel="stylesheet" href="../static/style/index.css">
+</head>
+
+<body>
+  <table>
+    <thead>
+      <th>ID</th>
+      <th>Robot ID</th>
+      <th>Verdor ID</th>
+      <th>Taks ID</th>
+      <th>Task Type</th>
+      <th>Destination Point</th>
+    </thead>
+
+    <tbody>
+      {{range .data}}
+      <tr>
+        <td><a href="deliveries/{{.Id}}">{{.Id}}</a></td>
+        <td>{{.RobotId}}</td>
+        <td>{{.VendorId}}</td>
+        <td>{{.TaskId}}</td>
+        <td>{{.TaskType}}</td>
+        <td>{{.DestinationPoint}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+
+  </table>
+</body>
+
+</html>
