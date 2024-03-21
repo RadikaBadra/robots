@@ -1,0 +1,42 @@
+{{ define "sidebar" }}
+<div class="sidebar bg-black">
+  <div class="cms-title">
+    <h2>CONCIERGE CMS</h2>
+  </div>
+  <div class="profile">
+    <div class="bg-profile">
+      <h1>M</h1>
+    </div>
+    <div class="profile-info">
+      <h3>Made Sanjaya</h3>
+      <p>madeputra.6166@gmail.com</p>
+    </div>
+  </div>
+  <ul>
+    <li>
+      <a href="/deliveries" class="nav-list"
+        ><i class="lni lni-home"></i
+        ><span class="text-secondary">Delivery</span></a
+      >
+    </li>
+    <li>
+      <a href="/robots" class="nav-list"
+        ><i class="lni lni-text-format"></i
+        ><span class="text-secondary">Robots List</span></a
+      >
+    </li>
+  </ul>
+</div>
+
+<script>
+    const links = document.querySelectorAll(".nav-list");
+    var path = window.location.href
+  
+    links.forEach((link) => {
+      if (link.href === path) {
+        link.classList.add("active");
+      }
+  });
+  
+  </script>
+{{ end }}

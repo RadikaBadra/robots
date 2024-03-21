@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Robot Detail</title>
-  <link rel="stylesheet" href="../static/style/index.css">
+  {{ template "init" . }}
+  <title>Document</title>
 </head>
+<body class="bg-primary text-secondary">
+  
+  <div class="layout">
+    <div class="main">
+      <!--    sidebar -->
+      {{ template "sidebar" . }}
 
-<body>
-  <h1>{{ .id}}</h1>
-  <h1>{{ .robot_id}}</h1>
-  <h1>{{ .task_id}}</h1>
-  <h1>{{ .task_type}}</h1>
-  <h1>{{ .destination_point}}</h1>
+      <div class="page-content">
+        <!-- header -->
+        {{ template "header" . }}
+
+        <div class="header-top border">
+          <div class="header container">
+            <h1>Detail</h1>
+          </div>
+        </div>
+        
+        <div class="card-detail bg-secondary">
+          <div class="detail-info">
+            <p>Robot Id</p>
+            <span>{{ .robot_id}}</sp>
+          </div>
+
+          <div class="detail-info">
+            <p>Vendor Id</p>
+            <span>{{ .vendor_id}}</span>
+          </div>
+
+          <div class="detail-info">
+            <p>Task Id</p>
+            <span>{{ .task_id}}</span>
+          </div>
+
+          <div class="detail-info">
+            <p>Task Type</p>
+            <span>{{ .task_type}}</span>
+          </div>
+
+          <div class="detail-info">
+            <p>Destination Point</p>
+            <div class="box-status">
+              <span class="status bg-accent">{{ .destination_point}}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-back">
+          <a href="/deliveries" class="text-secondary bg-black">Back</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+<script src="../static/js/script.js"></script>
 </body>
-
 </html>
